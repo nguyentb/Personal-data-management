@@ -22,3 +22,8 @@ In particular, you may make access control decisions based on either or both of 
 the client identity's MSP (Membership Service Provider) ID
 an attribute associated with the client identity
 CCkit contains identity package with structures and functions can that be used for implementing access control in chaincode.
+
+Defining token smart contract functions
+
+First, we need to define chaincode functions. In this project we use router package from CCkit, that allows us to define chaincode methods and their parameters in consistent way.
+The chaincode kit is embedded as a library for the Hyperledger Smart Contracts
