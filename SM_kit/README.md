@@ -1,33 +1,50 @@
-Hyperledger Fabric chaincode kit (CCKit)
-Go Report Card Build Coverage Status
+# Hyperledger Fabric chaincode kit (CCKit)
 
-CCkit is a programming toolkit for developing and testing hyperledger fabric chaincode
+[![Go Report Card](https://goreportcard.com/badge/github.com/s7techlab/cckit)](https://goreportcard.com/report/github.com/s7techlab/cckit)
+![Build](https://api.travis-ci.org/s7techlab/cckit.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/s7techlab/cckit/badge.svg?branch=master)](https://coveralls.io/github/s7techlab/cckit?branch=master)
 
-Overview
-CCKit features
-Centralized chaincode invocation handling via router
-MockStub testing, allowing to immediately receive test results
-Middleware support
-Chaincode method access control
-Automatic data structures conversion
-Problems with existing chaincode examples
-There are several chaincode examples available :
+**CCkit** is a **programming toolkit** for developing and testing hyperledger fabric chaincode
 
-Blockchain insurance application ( testing tutorial: how to write tests for "insurance" chaincode )
-Marbles from hyperledger
-Marbles from IBM-Blockchain
-Car-lease-demo from IBM-Blockchain
-main problems:
+## Overview
 
-Absence of chaincode methods routing
-Lots of code duplication (json marshalling / unmarshalling, validation, access control etc)
-Uncompleted testing tools (MockStub)
-Example based on CCKit
-Chaincode "Cars"
+### CCKit features 
+
+* Centralized chaincode invocation handling [via router](router)
+* [MockStub testing](testing), allowing to immediately receive test results
+* Middleware support
+* Chaincode method access control
+* Automatic data structures conversion
+
+
+### Problems with existing chaincode examples
+
+There are several chaincode examples available : 
+
+* [Blockchain insurance application](https://github.com/IBM/build-blockchain-insurance-app) ( testing tutorial:  how to [write tests for "insurance" chaincode](examples/insurance) )
+* [Marbles from hyperledger](https://github.com/hyperledger/fabric/blob/release-1.1/examples/chaincode/go/marbles02/marbles_chaincode.go)
+* [Marbles from IBM-Blockchain](https://github.com/IBM-Blockchain/marbles/blob/master/chaincode/src/marbles/marbles.go)
+* [Car-lease-demo from IBM-Blockchain](https://github.com/IBM-Blockchain-Archive/car-lease-demo/blob/master/Chaincode/src/vehicle_code/vehicles.go)
+
+
+main problems: 
+
+* Absence of chaincode methods routing
+* Lots of code duplication (json marshalling / unmarshalling, validation, access control etc)
+* Uncompleted testing tools (MockStub)
+
+
+
+## Example based on CCKit
+
+### Chaincode "Cars" 
+
 Car registration chaincode. Only authority can register car information, all can view information about registered cars.
 
-source code, tests
 
+[source code](examples/cars/cars.go),  [tests](examples/cars/cars_test.go)
+
+```go
 // Simple CRUD chaincode for store information about cars
 package main
 
@@ -124,9 +141,13 @@ func invokeCarRegister(c router.Context) (interface{}, error) {
 		// create composite key using CarKeyPrefix and car.Id
 		c.State().Insert(car)
 }
-Test for chaincode
-Tests are based on a modified MockStub
+```
 
+### Test for chaincode
+
+Tests are based on a modified [MockStub](testing/mockstub.go)
+
+```go
 package main
 
 import (
@@ -224,3 +245,5 @@ var _ = Describe(`Cars`, func() {
 		})
 	})
 })
+
+```
