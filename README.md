@@ -1,10 +1,6 @@
 # Personal Data Management platform deployed on top of the Hyperledger Fabric framework
 
-As well as Ethereum blockchain,  Hyperledger Fabric platform (HLF) can be used for token creation, implemented as
-smart contract (chaincode in HLF terminology), that holds user balances. Unlike Ethereum, HLF chaincodes can't work
-with user addresses as a holder key, thus we will use combination of Membership Service Provider (MSP) Identifier 
-and user certificate identifier. Below is an simple example of how to create a token as Golang chaincode on the 
-Hyperledger Fabric platform using CCKit chaincode library.
+The proposed Blockchain-based Personal Data Management platform consists of a blockchain network (e.g.,deployed using Hyperledger Fabric framework) in which associated Smart Contracts (e.g., chaincode) implemented personal data management logics are employed. The platform, which is built on top of a conventional database management system (DBMS) for off-chain storage, not only provides mechanisms for carrying out the Data Subject’s consent and rights, but also plays as a role of a Data Controller for controlling the processing and sharing of personal data via the underlying DBMS.
 
 ## What is Personal Data Management platform
 
