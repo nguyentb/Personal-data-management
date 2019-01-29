@@ -12,17 +12,17 @@ Essentially, an Ethereum token contract is a smart contract that holds a map of 
 The balance is a value that is defined by the contract creator - in can be fungible physical objects, another monetary value.
 The unit of this balance is commonly called a token.
 
-The platform consists of some personal data management functions:
+The platform consists of some personal data management functionalities:
 
-* `balanceOf` : returns the token balance of an owner identifier (account address in case of Ethereum)
+* `Identity Management` : ...
 
-* `transfer` : transfers an amount to an owner identifier of our choosing
+* `Authentication` : ...
 
-* `approve` : sets an amount of tokens a specified owner identifier is allowed to spend on our behalf
+* `Authentication` : ...
 
-* `allowance` : check how much an owner identifier is allowed to spend on our behalf
+* `Access Control` : Access Control level
 
-* `transferFrom` : specify an owner identifier to transfer from if we are allowed by that owner identifier to spend some tokens.
+* `Policy Check` : check whether an identity is allowed to access a personal dataset.
 
 
 ## Owner identifier in Hyperledger Fabric
