@@ -1,4 +1,6 @@
-# Personal Data Management - Ethereum-based system
+# Personal Data Management - Ethereum-based system and Hyperledger-based system
+
+# I. Personal Data Management: Ethereum-based system
 
 Follow the steps below to download, install, and run this project.
 
@@ -40,7 +42,7 @@ If you get stuck, please contact me at ngbitr@gmail.com.
 
 ------------------------
 
-# Personal Data Management platform deployed on top of the Hyperledger Fabric framework
+# II. Personal Data Management: Hyperledger Fabric-based system
 
 The proposed Blockchain-based Personal Data Management platform consists of a blockchain network (e.g.,deployed using Hyperledger Fabric framework) in which associated Smart Contracts (e.g., chaincode) implemented personal data management logics are employed. The platform, which is built on top of a conventional database management system (DBMS) for off-chain storage, not only provides mechanisms for carrying out the Data Subject’s consent and rights, but also plays as a role of a Data Controller for controlling the processing and sharing of personal data via the underlying DBMS.
 
